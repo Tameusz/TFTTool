@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tft/mainScene.png" />
+         </image>
+      </ImageView>
+      <Button id="dark-blue" fx:id="returnButton" layoutX="84.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionReturn" prefHeight="75.0" prefWidth="172.0" stylesheets="@style.css" text="Wróć do menu">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button id="dark-blue" fx:id="exit" layoutX="1086.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="75.0" prefWidth="130.0" stylesheets="@style.css" text="Wyjście">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
