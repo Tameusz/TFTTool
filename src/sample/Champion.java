@@ -1,18 +1,23 @@
 package sample;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Champion {
     public enum Origins {
-        CULTIST,DIVINE,ELDERWOOD,ENLIGHTENED,EXILE,FORTUNE,NINJA,BOSS,WARLORD
+        CULTIST,DIVINE,ELDERWOOD,ENLIGHTENED,EXILE,FORTUNE,NINJA,BOSS,WARLORD,SPIRIT,FABLED,DRAGONSOUL,DAREDEVIL
     }
     public enum Classes {
-        ADEPT,ASSASSIN,BRAWLER,DUELIST,EMPEROR,KEEPER,MAGE,MYSTIC,SHARPSHOOTER,VANGUARD
+        ADEPT,ASSASSIN,BRAWLER,DUELIST,EMPEROR,KEEPER,MAGE,MYSTIC,SHARPSHOOTER,VANGUARD,SYPHONER,SLAYER,EXECUTIONER,BLACKSMITH,
     }
     private String name;
-    private List<Origins> origins;
-    private List<Classes> classes;
-    private List<String> items;
+    private List<Origins> origins = new ArrayList<>();
+    private List<Classes> classes = new ArrayList<>();
+    private List<String> items = new ArrayList<>();
+
+    public Champion(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;

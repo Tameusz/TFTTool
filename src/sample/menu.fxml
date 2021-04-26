@@ -31,8 +31,11 @@
             <Image url="@tft/paper_back.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="aboutText" layoutX="108.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="82.13671875" />
-      <Button id="dark-blue" fx:id="exit" layoutX="1086.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="75.0" prefWidth="159.0" stylesheets="@style.css" text="Wyjście">
+      <Text fx:id="aboutText" layoutX="96.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" wrappingWidth="1093.13671875">
+         <font>
+            <Font size="23.0" />
+         </font></Text>
+      <Button id="dark-blue" fx:id="exit" layoutX="1086.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionExit" prefHeight="75.0" prefWidth="130.0" stylesheets="@style.css" text="Wyjście">
          <font>
             <Font size="20.0" />
          </font>
