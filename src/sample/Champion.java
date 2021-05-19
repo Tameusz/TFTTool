@@ -8,7 +8,7 @@ public class Champion {
         CULTIST,DIVINE,ELDERWOOD,ENLIGHTENED,EXILE,FORTUNE,NINJA,BOSS,WARLORD,SPIRIT,FABLED,DRAGONSOUL,DAREDEVIL
     }
     public enum Classes {
-        ADEPT,ASSASSIN,BRAWLER,DUELIST,EMPEROR,KEEPER,MAGE,MYSTIC,SHARPSHOOTER,VANGUARD,SYPHONER,SLAYER,EXECUTIONER,BLACKSMITH,
+        ADEPT,ASSASSIN,BRAWLER,DUELIST,EMPEROR,KEEPER,MAGE,MYSTIC,SHARPSHOOTER,VANGUARD,SYPHONER,SLAYER,EXECUTIONER,BLACKSMITH
     }
     private String name;
     private List<Origins> origins = new ArrayList<>();
@@ -37,5 +37,29 @@ public class Champion {
 
     public void addItem(String item) {
         items.add(item);
+    }
+
+    public List<Origins> getOrigins() {
+        return origins;
+    }
+
+    public void setOrigins(List<Origins> origins) {
+        this.origins = origins;
+    }
+
+    public List<Classes> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<Classes> classes) {
+        this.classes = classes;
+    }
+
+    public List<String> getItems() {
+        return items;
+    }
+
+    public void setItems(List<String> items) {
+        this.items = items;
     }
 }

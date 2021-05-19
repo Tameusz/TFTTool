@@ -43,11 +43,3 @@
     -fx-font-size: 20px;
     -fx-padding: 10 20 10 20;
 }
-#blockquote { color: #ffffff;
-    -fx-font-family: 'Merriweather', serif;
-    -fx-font-size: 30px;
-    -fx-font-weight: 300;
-    -fx-line-height: 40px;
-    -fx-margin: 0 30px 40px;
-    -fx-text-align: center;
-    -fx-text-shadow: #2a8d7b -1px -1px; }
