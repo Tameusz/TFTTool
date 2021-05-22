@@ -1,0 +1,4 @@
+Chojrak
+Samira nie ma many, polega na swoim systemie kombinacji. 
+Po każdym ataku podstawowym obraca się w kierunku nowego celu, zyskuje krótkotrwałą tarczę i strzela dwa razy, zwiększając w trakcie tego procesu wartość kombinacji. 
+Gdy osiągnie rangę S, odpala grad kul, ścinając każdego pechowca, który znalazł się w zasięgu jej celowników.

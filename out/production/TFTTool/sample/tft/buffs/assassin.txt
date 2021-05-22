@@ -1,0 +1,5 @@
+Zabójca
+Umiejętność wrodzona: przed rozpoczęciem walki Zabójcy skaczą na tył wroga.
+Umiejętności Zabójców mogą trafić krytycznie. Ponadto ich szanse na trafienie krytyczne są zwiększone o 40%, a trafienia krytyczne zadają o 40% więcej obrażeń.
+
+Postacie: Akali, Diana, Katarina, Pyke, Talon.

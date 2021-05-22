@@ -1,0 +1,5 @@
+Imperator
+Umiejętność wrodzona: Imperatorzy przywołują 2 dodatkowe jednostki, które można przemieszczać osobno. 
+Ci włócznicy używają umiejętności w tym samym momencie, co ich dowódca, i szybko tracą zdrowie, gdy ich dowódca zginie.
+
+Postacie: Azir.

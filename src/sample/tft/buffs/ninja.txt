@@ -1,0 +1,4 @@
+Ninja
+Ninja zyskują 90 obrażeń od ataku i mocy zaklęć. Ten efekt jest aktywny tylko wtedy, gdy masz dokładnie 1 lub dokładnie 4 ninja (tacy sami ninja się nie liczą).
+
+Postacie: Akali, Kennen, Shen, Zed.

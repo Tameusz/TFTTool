@@ -1,0 +1,5 @@
+Pojedynkowicz
+Umiejętność wrodzona: Pojedynkowicze poruszają się szybciej, a ich ataki przyznają prędkość ataku, do maks. 7 ładunków. 
+Za ładunek otrzymują +100% prędkości ataku.
+
+Postacie: Fiora, Jax, Kalista, Lee Sin, Xin Zhao, Yasuo.

@@ -1,0 +1,4 @@
+Adept
+Adepci uspokajają przebieg walki, zmniejszając prędkość ataku wszystkich wrogów o 50% na 8 sekund na początku walki.
+
+Postacie: Irelia, Shen, Yone.

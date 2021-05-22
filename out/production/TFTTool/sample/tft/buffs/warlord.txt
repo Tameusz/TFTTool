@@ -1,0 +1,5 @@
+Watażka
+Watażkowie mają dodatkowe statystyki. Każda zwycięska walka, w której wezmą udział, zwiększą premię o 10%. Efekt kumuluje się do 5 razy.
+700 zdrowia i 70 mocy zaklęć.
+
+Postacie: Azir, Garen, Jarvan IV, Katarina, Nidalee, Vi, Xin Zhao.

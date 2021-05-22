@@ -719,16 +719,12 @@ public class Controller {
                 jannaV, jarvanV, jaxV, kalistaV, katarinaV, kayleV, kennenV, kindredV, leeSinV, luluV, maokaiV, morganaV, nasusV, nautilusV, neekoV, nidaleeV,
                 nunuV, olafV, ornnV, pykeV, rakanV, samiraV, sejuaniV, settV, shenV, shyvanaV, sivirV, swainV, tahmKenchV, talonV, teemoV, tristanaV, tryndamereV,
                 twistedFateV, veigarV, viV, vladimirV, wukongV, xayahV, yasuoV, yoneV, yuumiV, zedV, zileanV};
-        System.out.println(imageViews[13]);
-        System.out.println(imageViews[18]);
     }
     void initViewsB() {
         imageViewsB = new ImageView[]{aatroxB,akaliB,annieB,aurelionSolB,azirB,brandB,braumB,chogathB,dariusB,dianaB,eliseB,fioraB,garenB,ireliaB,
                 jannaB,jarvanB,jaxB,kalistaB,katarinaB,kayleB,kennenB,kindredB,leeSinB,luluB,maokaiB,morganaB,nasusB,nautilusB,neekoB,nidaleeB,
                 nunuB,olafB,ornnB,pykeB,rakanB,samiraB,sejuaniB,settB,shenB,shyvanaB,sivirB,swainB,tahmKenchB,talonB,teemoB,tristanaB,tryndamereB,
                 twistedFateB,veigarB,viB,vladimirB,wukongB,xayahB,yasuoB,yoneB,yuumiB,zedB,zileanB};
-        System.out.println(imageViewsB[13]);
-        System.out.println(imageViewsB[18]);
     }
     void initBuffs() {
         imageViewsBuffs = new ImageView[]{cultist,divine,elderwood,enlightened,exile,fortune,ninja,boss,warlord,spirit,fabled,dragonsoul,daredevil,

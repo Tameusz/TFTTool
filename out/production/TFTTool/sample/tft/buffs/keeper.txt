@@ -1,0 +1,4 @@
+Kurator
+Na początku walki Kuratorzy zapewniają tarczę o wartości 250 punktów sobie i pobliskim sojusznikom na 8 sekund. Wytrzymałość tarczy jest zwiększona o 50% na kuratorach.
+
+Postacie: Azir, Elise, Jarvan IV, Kennen, Riven.

@@ -1,0 +1,10 @@
+Pogromca
+Cecha: pogromca to cecha z progami 2/4/6 dla 5 bohaterów, więc aby mieć jednostkę 6 poziomu, potrzebujecie wybrańca. 
+Bohaterowie z tą cechą zadają całą masę obrażeń i zyskują moc, odnosząc rany. Im niższy jest poziom zdrowia pogromcy, tym większą kradzieżą życia dysponuje, dzięki czemu może wylizać się z ran. 
+Im niższy poziom zdrowia ma cel atakowany przez pogromcę, tym więcej obrażeń pogromca mu zadaje, dzięki czemu może likwidować zranione cele. Idealna cecha dla tych, którzy chcą dobić przeciwnika.
+Bohaterowie:
+Zed: ninja 2. kategorii
+Darius: szczęściarz 3. kategorii
+Olaf: smocza dusza 4. kategorii
+Tryndamere: Pan Wojny pojedynkowicz 4. kategorii
+Samira: chojrak strzelec wyborowy 5. kategorii

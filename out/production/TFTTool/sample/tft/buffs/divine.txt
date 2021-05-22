@@ -1,0 +1,5 @@
+Bóstwo
+Po sześciokrotnym zaatakowaniu lub gdy poziom ich zdrowia spadnie poniżej 50%, 
+Bóstwa zostają wyniesione, przez co otrzymują obrażenia zmniejszone o 25% i zadają 100% dodatkowych obrażeń nieuchronnych do końca walki.
+
+Postacie: Irelia, Jax, Lee Sin, Lux, Warwick, Wukong.

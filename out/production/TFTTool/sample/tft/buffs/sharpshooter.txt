@@ -1,0 +1,4 @@
+Strzelec Wyborowy
+Ataki i umiejętności Strzelców Wyborowych odbijają się rykoszetem do 3 pobliskich wrogów, zadając obrażenia zmniejszone o 30%.
+
+Postacie: Jhin, Jinx, Nidalee, Teemo, Vayne.

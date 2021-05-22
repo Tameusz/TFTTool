@@ -1,0 +1,5 @@
+Wygnaniec
+Jeśli Wygnaniec nie sąsiaduje z żadnym sojusznikiem na początku walki, zyskuje:
+tarczę o wytrzymałości równej 50% jego maksymalnego zdrowia oraz 100% kradzieży życia.
+
+Postacie: Yasuo, Yone.

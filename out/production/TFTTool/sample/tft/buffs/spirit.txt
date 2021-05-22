@@ -1,0 +1,4 @@
+Duch
+Przy pierwszym użyciu umiejętności przez Ducha wszyscy sojusznicy zyskują prędkość ataku o wartości 90% kosztu many tej umiejętności.
+
+Postacie: Ahri, Kindred, Teemo, Yuumi.

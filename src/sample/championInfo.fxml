@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#enter" prefHeight="560.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fx:id="aatroxB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/aatroxB.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="kennenB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/kennenB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kayleB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/kayleB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="katarinaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/katarinaB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kalistaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/kalistaB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jaxB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/jaxB.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jarvanB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/jarvanB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="jannaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/jannaB.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ireliaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/ireliaB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="garenB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/garenB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fioraB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/fioraB.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="eliseB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/eliseB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dianaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/dianaB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="dariusB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/dariusB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chogathB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/chogathB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="braumB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/braumB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="brandB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/brandB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="azirB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/azirB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="aurelionSolB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/aurelionSolB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="annieB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/Annie_8.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="akaliB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/akaliB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ornnB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/ornnB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="olafB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/olafB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nunuB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/nunuB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nidaleeB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/nidaleeB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="neekoB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/neekoB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nautilusB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/nautilusB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="nasusB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/nasusB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="morganaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/morganaB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="maokaiB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/maokaiB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="luluB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/luluB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="leeSinB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/leeSinB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kindredB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/kindredB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tahmKenchB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/tahmKenchB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="swainB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/swainB.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sivirB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/sivirB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="shyvanaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/shyvanaB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="shenB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/shenB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="settB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/settB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sejuaniB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/sejuaniB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="samiraB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/samiraB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rakanB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/rekanB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pykeB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/pykeB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="yoneB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/yoneB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="yasuoB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/yasuoB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false" fx:id="xayahB">
+         <image>
+            <Image url="@tft/champions/xayahB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="wukongB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/wukongB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="vladimirB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/vladimirB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="viB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/viB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="veigarB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/veigarB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="twistedFateB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/twistedFateB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tryndamereB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/tryndamereB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tristanaB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/Tristana_10.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="teemoB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/teemoB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="talonB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/talonB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zileanB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/zileanB.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="zedB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/zedB.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="yuumiB" fitHeight="560.0" fitWidth="308.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@tft/champions/yuumiB.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="championInfo" layoutX="327.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="669.13671875" />
+   </children>
+</Pane>

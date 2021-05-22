@@ -1,0 +1,6 @@
+Gangster
+Gdy zdrowie Gangstera spadnie do 40%, odsuwa się od walki i zaczyna robić brzuszki. 
+Każde powtórzenie przywraca mu 15% zdrowia i daje mu 20% prędkości ataku. Jeśli powróci do pełni zdrowia, wraca do walki Podjarany, 
+zmieniając obrażenia podstawowych ataków i umiejętności na obrażenia nieuchronne. Jeśli wszyscy jego sojusznicy zginą, natychmiast wróci do walki.
+
+Postacie: Sett.
