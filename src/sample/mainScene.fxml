@@ -33,7 +33,7 @@
             <DropShadow spread="0.55" />
          </effect>
       </Text>
-      <Pane fx:id="place" layoutX="393.0" layoutY="360.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" prefHeight="249.0" prefWidth="494.0" />
+      <Pane fx:id="place" layoutX="393.0" layoutY="360.0" onDragOver="#over" prefHeight="249.0" prefWidth="494.0" />
       <Text fill="WHITE" layoutX="1086.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Merriweather', serif;     -fx-font-size: 30px;     -fx-font-weight: 300;     -fx-line-height: 40px;     -fx-margin: 0 30px 40px;     -fx-text-align: center;     -fx-text-shadow: #2a8d7b -1px -1px;" text="Buffy" textAlignment="CENTER" wrappingWidth="130.0">
          <font>
             <Font size="31.0" />
@@ -487,5 +487,10 @@
             <DropShadow radius="23.3425" spread="0.89" width="74.37" />
          </effect>
       </Text>
+      <Button id="dark-blue" fx:id="save" layoutX="887.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionSave" prefHeight="75.0" prefWidth="172.0" stylesheets="@style.css" text="Zapisz">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
