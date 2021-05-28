@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,12 +20,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.net.URL;
+import java.util.*;
 
-public class Controller {
+public class Controller implements Initializable {
     @FXML
     private ImageView textField;
 
@@ -39,6 +38,14 @@ public class Controller {
 
     @FXML
     private Text championInfo;
+
+    @FXML
+    private Pane place;
+
+    @FXML
+    private Pane championPool;
+    //@FXML
+    //private Pane mainScene;
 
     @FXML
     private ImageView aatroxV,akaliV,annieV,aurelionSolV,azirV,brandV,braumV,chogathV,dariusV,dianaV,eliseV,fioraV,garenV,ireliaV,
@@ -61,12 +68,19 @@ public class Controller {
     ImageView[] imageViewsB;
     ImageView[] imageViewsBuffs;
     boolean championInfoIsShowed = true;
-
     List<Champion> champions = new ArrayList<>();
     //origins CULTIST-0,DIVINE-1,ELDERWOOD-2,ENLIGHTENED-3,EXILE-4,FORTUNE-5,NINJA-6,BOSS-7,WARLORD-8,SPIRIT-9,FABLED-10,DRAGONSOUL-11,DAREDEVIL-12
     int[] buffsCountOrigins = new int[13];
     //classes ADEPT-0,ASSASSIN-1,BRAWLER-2,DUELIST-3,EMPEROR-4,KEEPER-5,MAGE-6,MYSTIC-7,SHARPSHOOTER-8,VANGUARD-9,SYPHONER-10,SLAYER-11,EXECUTIONER-12,BLACKSMITH-13
     int[] buffsCountClasses = new int[14];
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        initViews();
+        initChamps();
+        initViewsB();
+        initBuffs();
+    }
 
     @FXML
     void onActionAboutApp(ActionEvent event) {
@@ -104,10 +118,6 @@ public class Controller {
 
     @FXML
     void onActionStart(ActionEvent event) {
-        initChamps();
-        initViews();
-        initViewsB();
-        //championPoolImages();
         try {
             Parent root = FXMLLoader.load(getClass().getResource("mainScene.fxml"));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -141,7 +151,7 @@ public class Controller {
         try {
             FileWriter file = new FileWriter("yourbuild.txt");
             for(int i=0; i<place.getChildren().size(); ++i)
-            file.append(place.getChildren().get(i).getId().replace("V","") + "\n");
+            file.append(place.getChildren().get(i).getId().replace("V","") + "\n" + place.getChildren().get(i).getScene().getX() + "\n" + place.getChildren().get(i).getScene().getY() + "\n");
             file.append(buffs.getText());
             file.close();
         } catch (IOException e) {
@@ -149,13 +159,38 @@ public class Controller {
         }
     }
 
+    @FXML
+    void onActionLoad(ActionEvent event) {
+        try {
+            File file = new File("yourbuild.txt");
+            Scanner scanner = new Scanner(file);
+            String temp;
+            while (scanner.hasNextLine()) {
+                temp = scanner.nextLine();
+                for (int i = 0; i < champions.size(); ++i) {
+                    if (champions.get(i).getName().toLowerCase().equals(temp)) {
+                        place.getChildren().add(imageViews[i]);
+                        imageViews[i].setX(Double.parseDouble(scanner.nextLine()));
+                        imageViews[i].setY(Double.parseDouble(scanner.nextLine()));
+                        break;
+                    }
+                }
+                if(temp.equals(Champion.Classes.EMPEROR.toString())||temp.equals(Champion.Classes.ADEPT.toString())||temp.equals(Champion.Classes.ASSASSIN.toString())||temp.equals(Champion.Classes.BRAWLER.toString())||temp.equals(Champion.Classes.DUELIST.toString())||temp.equals(Champion.Classes.KEEPER.toString())||temp.equals(Champion.Classes.MAGE.toString())||temp.equals(Champion.Classes.MYSTIC.toString())||temp.equals(Champion.Classes.SHARPSHOOTER.toString())||temp.equals(Champion.Classes.VANGUARD.toString())||temp.equals(Champion.Classes.SYPHONER.toString())||temp.equals(Champion.Classes.SLAYER.toString())||temp.equals(Champion.Classes.EXECUTIONER.toString())||temp.equals(Champion.Classes.BLACKSMITH.toString())||
+                   temp.equals(Champion.Origins.CULTIST.toString())||temp.equals(Champion.Origins.DIVINE.toString())||temp.equals(Champion.Origins.ELDERWOOD.toString())||temp.equals(Champion.Origins.ENLIGHTENED.toString())||temp.equals(Champion.Origins.EXILE.toString())||temp.equals(Champion.Origins.FORTUNE.toString())||temp.equals(Champion.Origins.NINJA.toString())||temp.equals(Champion.Origins.BOSS.toString())||temp.equals(Champion.Origins.WARLORD.toString())||temp.equals(Champion.Origins.SPIRIT.toString())||temp.equals(Champion.Origins.FABLED.toString())||temp.equals(Champion.Origins.DRAGONSOUL.toString())||temp.equals(Champion.Origins.DAREDEVIL.toString())) {
+                    buffs.setText(buffs.getText() + temp + "\n");
+                }
+            }
+            scanner.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     //mouse events
     @FXML
     void enter(MouseEvent event) throws FileNotFoundException {
-        initViews();
-        initChamps();
-        initViewsB();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scanner scanner = new Scanner(new File("src/sample/tft/champions/" + stage.getTitle() + ".txt"));
             for (int i = 0; i < 58; ++i) {
@@ -170,12 +205,10 @@ public class Controller {
                 }
             }
     }
+
     @FXML
     void mouseClick(MouseEvent event) {
         try {
-            initViews();
-            initChamps();
-            initViewsB();
             for(int i=0;i<58;++i) {
                 if(event.getSource().equals(imageViews[i])) {
                     Stage stage = new Stage();
@@ -192,9 +225,10 @@ public class Controller {
         }
     }
 
+
+
     @FXML
     void done(DragEvent event) {
-        //initViews();
         //for(int i=0;i<58;++i) {
         //    if(event.getSource().equals(imageViews[i])) {
         //        //System.out.println(imageViews[i].getLayoutX());
@@ -206,10 +240,9 @@ public class Controller {
 
     @FXML
     void drag(MouseEvent event) {
-        initViews();
         for(int i=0;i<58;++i) {
             if(event.getSource().equals(imageViews[i])) {
-                Dragboard db = imageViews[i].startDragAndDrop(TransferMode.MOVE);
+                Dragboard db = imageViews[i].startDragAndDrop(TransferMode.ANY);
 
                 ClipboardContent content = new ClipboardContent();
                 content.putImage(imageViews[i].getImage());
@@ -220,115 +253,195 @@ public class Controller {
     }
 
     @FXML
-    private Pane place;
-
-    @FXML
     void drop(DragEvent event) {
-        initViews();
-        initChamps();
-        event.acceptTransferModes(TransferMode.MOVE);
-
-        for(int i=0;i<58;++i) {
-            if(event.getSource().equals(imageViews[i])) {
-                boolean success = false;
-                Node node = event.getPickResult().getIntersectedNode();
-                if(node != championPool){
-                    //place.getChildren().add(imageViews[i]);
-                    success = true;
-                    imageViews[i].setX(event.getX()-23);
-                    imageViews[i].setY(event.getY()-23);
-                }
-                event.setDropCompleted(success);
-                if(imageViews[i].getId().equals(champions.get(i).getName() + "V")) {
+        event.acceptTransferModes(TransferMode.ANY);
+            for (int i = 0; i < 58; ++i) {
+                if (event.getSource().equals(imageViews[i])) {
+                    //boolean success = false;
+                    //Node node = event.getPickResult().getIntersectedNode();
+                    //if(node != championPool){
+                    place.getChildren().add(imageViews[i]);
+                    //success = true;
+                    imageViews[i].setX(event.getX() - 23);
+                    imageViews[i].setY(event.getY() - 23);
+                    //}
+                    //event.setDropCompleted(success);
+                    if (imageViews[i].getId().equals(champions.get(i).getName() + "V")) {
 //origins CULTIST-0,DIVINE-1,ELDERWOOD-2,ENLIGHTENED-3,EXILE-4,FORTUNE-5,NINJA-6,BOSS-7,WARLORD-8,SPIRIT-9,FABLED-10,DRAGONSOUL-11,DAREDEVIL-12
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.CULTIST)) { buffsCountOrigins[0]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.DIVINE)) { buffsCountOrigins[1]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.ELDERWOOD)) { buffsCountOrigins[2]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.ENLIGHTENED)) { buffsCountOrigins[3]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.EXILE)) { buffsCountOrigins[4]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.FORTUNE)) { buffsCountOrigins[5]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.NINJA)) { buffsCountOrigins[6]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.BOSS)) { buffsCountOrigins[7]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.WARLORD)) { buffsCountOrigins[8]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.SPIRIT)) { buffsCountOrigins[9]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.FABLED)) { buffsCountOrigins[10]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.DRAGONSOUL)) { buffsCountOrigins[11]++; }
-                   if(champions.get(i).getOrigins().get(0).equals(Champion.Origins.DAREDEVIL)) { buffsCountOrigins[12]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.ADEPT)) { buffsCountClasses[0]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.ASSASSIN)) { buffsCountClasses[1]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.BRAWLER)) { buffsCountClasses[2]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.DUELIST)) { buffsCountClasses[3]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.EMPEROR)) { buffsCountClasses[4]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.KEEPER)) { buffsCountClasses[5]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.MAGE)) { buffsCountClasses[6]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.MYSTIC)) { buffsCountClasses[7]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.SHARPSHOOTER)) { buffsCountClasses[8]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.VANGUARD)) { buffsCountClasses[9]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.SYPHONER)) { buffsCountClasses[10]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.SLAYER)) { buffsCountClasses[11]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.EXECUTIONER)) { buffsCountClasses[12]++; }
-                   if(champions.get(i).getClasses().get(0).equals(Champion.Classes.BLACKSMITH)) { buffsCountClasses[13]++; }
-                   if(champions.get(i).getName().equals("azir")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.EMPEROR)) { buffsCountClasses[4]++; } }
-                   if(champions.get(i).getName().equals("irelia")) { if(champions.get(i).getClasses().get(1).equals(Champion.Origins.DIVINE)) { buffsCountOrigins[1]++; } }
-                   if(champions.get(i).getName().equals("katarina")) { if(champions.get(i).getClasses().get(1).equals(Champion.Origins.FORTUNE)) { buffsCountOrigins[5]++; } }
-                   if(champions.get(i).getName().equals("ornn")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.VANGUARD)) { buffsCountClasses[9]++; } }
-                   if(champions.get(i).getName().equals("pyke")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.SLAYER)) { buffsCountClasses[11]++; } }
-                   if(champions.get(i).getName().equals("samira")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.SLAYER)) { buffsCountClasses[11]++; } }
-                   if(champions.get(i).getName().equals("shen")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.MYSTIC)) { buffsCountClasses[7]++; } }
-                   if(champions.get(i).getName().equals("tryndamere")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.SLAYER)) { buffsCountClasses[11]++; } }
-                   if(champions.get(i).getName().equals("xayah")) { if(champions.get(i).getClasses().get(1).equals(Champion.Classes.KEEPER)) { buffsCountClasses[5]++; } }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.CULTIST)) {
+                    buffsCountOrigins[0]++;
                 }
-                event.consume();
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.DIVINE)) {
+                    buffsCountOrigins[1]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.ELDERWOOD)) {
+                    buffsCountOrigins[2]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.ENLIGHTENED)) {
+                    buffsCountOrigins[3]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.EXILE)) {
+                    buffsCountOrigins[4]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.FORTUNE)) {
+                    buffsCountOrigins[5]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.NINJA)) {
+                    buffsCountOrigins[6]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.BOSS)) {
+                    buffsCountOrigins[7]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.WARLORD)) {
+                    buffsCountOrigins[8]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.SPIRIT)) {
+                    buffsCountOrigins[9]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.FABLED)) {
+                    buffsCountOrigins[10]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.DRAGONSOUL)) {
+                    buffsCountOrigins[11]++;
+                }
+                if (champions.get(i).getOrigins().get(0).equals(Champion.Origins.DAREDEVIL)) {
+                    buffsCountOrigins[12]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.ADEPT)) {
+                    buffsCountClasses[0]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.ASSASSIN)) {
+                    buffsCountClasses[1]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.BRAWLER)) {
+                    buffsCountClasses[2]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.DUELIST)) {
+                    buffsCountClasses[3]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.EMPEROR)) {
+                    buffsCountClasses[4]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.KEEPER)) {
+                    buffsCountClasses[5]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.MAGE)) {
+                    buffsCountClasses[6]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.MYSTIC)) {
+                    buffsCountClasses[7]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.SHARPSHOOTER)) {
+                    buffsCountClasses[8]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.VANGUARD)) {
+                    buffsCountClasses[9]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.SYPHONER)) {
+                    buffsCountClasses[10]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.SLAYER)) {
+                    buffsCountClasses[11]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.EXECUTIONER)) {
+                    buffsCountClasses[12]++;
+                }
+                if (champions.get(i).getClasses().get(0).equals(Champion.Classes.BLACKSMITH)) {
+                    buffsCountClasses[13]++;
+                }
+                if (champions.get(i).getName().equals("azir")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.EMPEROR)) {
+                        buffsCountClasses[4]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("irelia")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Origins.DIVINE)) {
+                        buffsCountOrigins[1]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("katarina")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Origins.FORTUNE)) {
+                        buffsCountOrigins[5]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("ornn")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.VANGUARD)) {
+                        buffsCountClasses[9]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("pyke")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.SLAYER)) {
+                        buffsCountClasses[11]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("samira")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.SLAYER)) {
+                        buffsCountClasses[11]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("shen")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.MYSTIC)) {
+                        buffsCountClasses[7]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("tryndamere")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.SLAYER)) {
+                        buffsCountClasses[11]++;
+                    }
+                }
+                if (champions.get(i).getName().equals("xayah")) {
+                    if (champions.get(i).getClasses().get(1).equals(Champion.Classes.KEEPER)) {
+                        buffsCountClasses[5]++;
+                    }
+                }
             }
-        }
-//classes ADEPT-0,ASSASSIN-1,BRAWLER-2,DUELIST-3,EMPEROR-4,KEEPER-5,MAGE-6,MYSTIC-7,SHARPSHOOTER-8,VANGUARD-9,SYPHONER-10,SLAYER-11,EXECUTIONER-12,BLACKSMITH-13
-        if(buffsCountOrigins[0]>=8) { buffs.setText(buffs.getText() + "\n"  + Champion.Origins.CULTIST); buffsCountOrigins[0]=0; }
-        if(buffsCountOrigins[1]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.DIVINE); buffsCountOrigins[1]=0; }
-        if(buffsCountOrigins[2]>=7) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.ELDERWOOD); buffsCountOrigins[2]=0; }
-        if(buffsCountOrigins[3]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.ENLIGHTENED); buffsCountOrigins[3]=0; }
-        if(buffsCountOrigins[4]>=2) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.EXILE); buffsCountOrigins[4]=0; }
-        if(buffsCountOrigins[5]>=5) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.FORTUNE); buffsCountOrigins[5]=0; }
-        if(buffsCountOrigins[6]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.NINJA); buffsCountOrigins[6]=0; }
-        if(buffsCountOrigins[7]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.BOSS); buffsCountOrigins[7]=0; }
-        if(buffsCountOrigins[8]>=7) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.WARLORD); buffsCountOrigins[8]=0; }
-        if(buffsCountOrigins[9]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.SPIRIT); buffsCountOrigins[9]=0; }
-        if(buffsCountOrigins[10]>=3) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.FABLED); buffsCountOrigins[10]=0; }
-        if(buffsCountOrigins[11]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.DRAGONSOUL); buffsCountOrigins[11]=0; }
-        if(buffsCountOrigins[12]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.DAREDEVIL); buffsCountOrigins[12]=0; }
-        if(buffsCountClasses[0]>=3) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.ADEPT); buffsCountClasses[0]=0; }
-        if(buffsCountClasses[1]>=5) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.ASSASSIN); buffsCountClasses[1]=0; }
-        if(buffsCountClasses[2]>=7) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.BRAWLER); buffsCountClasses[2]=0; }
-        if(buffsCountClasses[3]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.DUELIST); buffsCountClasses[3]=0; }
-        if(buffsCountClasses[4]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.EMPEROR); buffsCountClasses[4]=0; }
-        if(buffsCountClasses[5]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.KEEPER); buffsCountClasses[5]=0; }
-        if(buffsCountClasses[6]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.MAGE); buffsCountClasses[6]=0; }
-        if(buffsCountClasses[7]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.MYSTIC); buffsCountClasses[7]=0; }
-        if(buffsCountClasses[8]>=5) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.SHARPSHOOTER); buffsCountClasses[8]=0; }
-        if(buffsCountClasses[9]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.VANGUARD); buffsCountClasses[9]=0; }
-        if(buffsCountClasses[10]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.SYPHONER); buffsCountClasses[10]=0; }
-        if(buffsCountClasses[11]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.SLAYER); buffsCountClasses[11]=0; }
-        if(buffsCountClasses[12]>=3) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.EXECUTIONER); buffsCountClasses[12]=0; }
-        if(buffsCountClasses[13]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.BLACKSMITH); buffsCountClasses[13]=0; }
+                event.consume();
+                }
+            }
 
+        {
+            if(buffsCountOrigins[0]>=8) { buffs.setText(buffs.getText() + "\n"  + Champion.Origins.CULTIST); buffsCountOrigins[0]=0; }
+            if(buffsCountOrigins[1]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.DIVINE); buffsCountOrigins[1]=0; }
+            if(buffsCountOrigins[2]>=7) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.ELDERWOOD); buffsCountOrigins[2]=0; }
+            if(buffsCountOrigins[3]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.ENLIGHTENED); buffsCountOrigins[3]=0; }
+            if(buffsCountOrigins[4]>=2) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.EXILE); buffsCountOrigins[4]=0; }
+            if(buffsCountOrigins[5]>=5) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.FORTUNE); buffsCountOrigins[5]=0; }
+            if(buffsCountOrigins[6]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.NINJA); buffsCountOrigins[6]=0; }
+            if(buffsCountOrigins[7]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.BOSS); buffsCountOrigins[7]=0; }
+            if(buffsCountOrigins[8]>=7) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.WARLORD); buffsCountOrigins[8]=0; }
+            if(buffsCountOrigins[9]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.SPIRIT); buffsCountOrigins[9]=0; }
+            if(buffsCountOrigins[10]>=3) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.FABLED); buffsCountOrigins[10]=0; }
+            if(buffsCountOrigins[11]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.DRAGONSOUL); buffsCountOrigins[11]=0; }
+            if(buffsCountOrigins[12]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Origins.DAREDEVIL); buffsCountOrigins[12]=0; }
+            if(buffsCountClasses[0]>=3) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.ADEPT); buffsCountClasses[0]=0; }
+            if(buffsCountClasses[1]>=5) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.ASSASSIN); buffsCountClasses[1]=0; }
+            if(buffsCountClasses[2]>=7) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.BRAWLER); buffsCountClasses[2]=0; }
+            if(buffsCountClasses[3]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.DUELIST); buffsCountClasses[3]=0; }
+            if(buffsCountClasses[4]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.EMPEROR); buffsCountClasses[4]=0; }
+            if(buffsCountClasses[5]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.KEEPER); buffsCountClasses[5]=0; }
+            if(buffsCountClasses[6]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.MAGE); buffsCountClasses[6]=0; }
+            if(buffsCountClasses[7]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.MYSTIC); buffsCountClasses[7]=0; }
+            if(buffsCountClasses[8]>=5) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.SHARPSHOOTER); buffsCountClasses[8]=0; }
+            if(buffsCountClasses[9]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.VANGUARD); buffsCountClasses[9]=0; }
+            if(buffsCountClasses[10]>=4) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.SYPHONER); buffsCountClasses[10]=0; }
+            if(buffsCountClasses[11]>=6) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.SLAYER); buffsCountClasses[11]=0; }
+            if(buffsCountClasses[12]>=3) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.EXECUTIONER); buffsCountClasses[12]=0; }
+            if(buffsCountClasses[13]>=1) { buffs.setText(buffs.getText() + "\n" + Champion.Classes.BLACKSMITH); buffsCountClasses[13]=0; }
+        }
     }
+
     @FXML
     void over(DragEvent event) {
-        if(event.getDragboard().hasImage()) {
-            event.acceptTransferModes(TransferMode.MOVE);
+        if(event.getDragboard().hasImage() && event.getGestureSource() != place) {
+            event.acceptTransferModes(TransferMode.ANY);
             event.consume();
         }
     }
 
-    @FXML
-    private Pane championPool;
-    //@FXML
-    //private Pane mainScene;
+
 
     @FXML
     void enterTooltip(MouseEvent event) {
-        initBuffs();
-        initViews();
-        initChamps();
         try {
         Tooltip tooltip = new Tooltip();
         tooltip.setShowDelay(new Duration(0.0));
@@ -354,10 +467,17 @@ public class Controller {
                     //imageViews[0].setStyle("-fx-fill: red;");
                 }
             }
+            for(int i = 0; i < imageViews.length; ++i) {
+                if (event.getSource().equals(imageViews[i])) {
+                    tooltip.setText(imageViews[i].getId().replace("V", "").toUpperCase());
+                    Tooltip.install(imageViews[i], tooltip);
+                }
+            }
         } catch (Exception e) {
             System.out.println(e.getCause());
         }
     }
+
     void initChamps() {
         Champion aatrox = new Champion("aatrox"); aatrox.addOrigin(Champion.Origins.CULTIST); aatrox.addClass(Champion.Classes.VANGUARD);
         Champion akali = new Champion("akali"); akali.addOrigin(Champion.Origins.NINJA); akali.addClass(Champion.Classes.ASSASSIN);
@@ -422,18 +542,21 @@ public class Controller {
                 nunu,olaf,ornn,pyke,rakan,samira,sejuani,sett,shen,shyvana,sivir,swain,tahmKench,talon,teemo,tristana,tryndamere,
                 twistedFate,veigar,vi,vladimir,wukong,xayah,yasuo,yone,yuumi,zed,zilean);
     }
+
     void initViews() {
         imageViews = new ImageView[]{aatroxV, akaliV, annieV, aurelionSolV, azirV, brandV, braumV, chogathV, dariusV, dianaV, eliseV, fioraV, garenV, ireliaV,
                 jannaV, jarvanV, jaxV, kalistaV, katarinaV, kayleV, kennenV, kindredV, leeSinV, luluV, maokaiV, morganaV, nasusV, nautilusV, neekoV, nidaleeV,
                 nunuV, olafV, ornnV, pykeV, rakanV, samiraV, sejuaniV, settV, shenV, shyvanaV, sivirV, swainV, tahmKenchV, talonV, teemoV, tristanaV, tryndamereV,
                 twistedFateV, veigarV, viV, vladimirV, wukongV, xayahV, yasuoV, yoneV, yuumiV, zedV, zileanV};
     }
+
     void initViewsB() {
         imageViewsB = new ImageView[]{aatroxB,akaliB,annieB,aurelionSolB,azirB,brandB,braumB,chogathB,dariusB,dianaB,eliseB,fioraB,garenB,ireliaB,
                 jannaB,jarvanB,jaxB,kalistaB,katarinaB,kayleB,kennenB,kindredB,leeSinB,luluB,maokaiB,morganaB,nasusB,nautilusB,neekoB,nidaleeB,
                 nunuB,olafB,ornnB,pykeB,rakanB,samiraB,sejuaniB,settB,shenB,shyvanaB,sivirB,swainB,tahmKenchB,talonB,teemoB,tristanaB,tryndamereB,
                 twistedFateB,veigarB,viB,vladimirB,wukongB,xayahB,yasuoB,yoneB,yuumiB,zedB,zileanB};
     }
+
     void initBuffs() {
         imageViewsBuffs = new ImageView[]{cultist,divine,elderwood,enlightened,exile,fortune,ninja,boss,warlord,spirit,fabled,dragonsoul,daredevil,
                 adept,assassin,brawler,duelist,emperor,keeper,mage,mystic,sharpshooter,vanguard,syphoner,slayer,executioner,blacksmith};

@@ -44,292 +44,292 @@
       </Text>
       <Pane fx:id="championPool" accessibleRole="IMAGE_VIEW" layoutX="56.0" layoutY="169.0" prefHeight="460.0" prefWidth="276.0" stylesheets="@style.css">
          <children>
-            <ImageView fx:id="aatroxV" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="aatroxV" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/aatrox.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="akaliV" layoutX="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="akaliV" layoutX="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/akali.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="annieV" layoutX="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="annieV" layoutX="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/annie.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="aurelionSolV" layoutX="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="aurelionSolV" layoutX="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/aurelionSol.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="azirV" layoutX="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="azirV" layoutX="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/azir.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="brandV" layoutX="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="brandV" layoutX="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/brand.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="braumV" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="braumV" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/braum.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="chogathV" layoutX="46.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="chogathV" layoutX="46.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/chogath.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="dariusV" layoutX="92.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="dariusV" layoutX="92.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/darius.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="dianaV" layoutX="138.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="dianaV" layoutX="138.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/Diana.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="eliseV" layoutX="184.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="eliseV" layoutX="184.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/elise.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="fioraV" layoutX="230.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="fioraV" layoutX="230.0" layoutY="46.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/fiora.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="garenV" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="garenV" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/garen.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="ireliaV" layoutX="46.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="ireliaV" layoutX="46.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/irelia.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="jannaV" layoutX="92.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="jannaV" layoutX="92.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/janna.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="jarvanV" layoutX="138.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="jarvanV" layoutX="138.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/jarvan.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="jaxV" layoutX="184.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="jaxV" layoutX="184.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/jax.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="kalistaV" layoutX="230.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="kalistaV" layoutX="230.0" layoutY="92.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/kalista.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="katarinaV" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="katarinaV" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/katarina.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="kayleV" layoutX="46.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="kayleV" layoutX="46.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/kayle.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="kennenV" layoutX="92.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="kennenV" layoutX="92.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/kennen.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="kindredV" layoutX="138.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="kindredV" layoutX="138.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/kindred.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="leeSinV" layoutX="184.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="leeSinV" layoutX="184.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/leeSin.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="luluV" layoutX="230.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="luluV" layoutX="230.0" layoutY="138.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/lulu.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="maokaiV" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="maokaiV" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/maokai.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="morganaV" layoutX="46.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="morganaV" layoutX="46.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/morgana.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="nasusV" layoutX="92.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="nasusV" layoutX="92.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/nasus.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="nautilusV" layoutX="138.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="nautilusV" layoutX="138.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/nautilus.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="neekoV" layoutX="184.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="neekoV" layoutX="184.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/neeko.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="nidaleeV" layoutX="230.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="nidaleeV" layoutX="230.0" layoutY="184.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/nidalee.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="nunuV" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="nunuV" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/nunu.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="olafV" layoutX="46.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="olafV" layoutX="46.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/olaf.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="ornnV" layoutX="92.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="ornnV" layoutX="92.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/ornn.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="pykeV" layoutX="138.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="pykeV" layoutX="138.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/pyke.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="rakanV" layoutX="184.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="rakanV" layoutX="184.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/rakan.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="samiraV" layoutX="230.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="samiraV" layoutX="230.0" layoutY="230.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/samira.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="sejuaniV" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="sejuaniV" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/sejuani.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="settV" layoutX="46.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="settV" layoutX="46.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/sett.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="shenV" layoutX="92.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="shenV" layoutX="92.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/shen.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="shyvanaV" layoutX="138.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="shyvanaV" layoutX="138.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/shyvana.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="sivirV" layoutX="184.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="sivirV" layoutX="184.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/sivir.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="swainV" layoutX="230.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="swainV" layoutX="230.0" layoutY="276.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/swain.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="tahmKenchV" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="tahmKenchV" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/tahmKench.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="teemoV" layoutX="92.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="teemoV" layoutX="92.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/teemo.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="talonV" layoutX="46.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="talonV" layoutX="46.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/talon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="tristanaV" layoutX="138.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="tristanaV" layoutX="138.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/tristana.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="tryndamereV" layoutX="184.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="tryndamereV" layoutX="184.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/tryndamere.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="twistedFateV" layoutX="230.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="twistedFateV" layoutX="230.0" layoutY="322.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/twistedFate.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="veigarV" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="veigarV" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/veigar.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="viV" layoutX="46.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="viV" layoutX="46.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/vi.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="vladimirV" layoutX="92.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="vladimirV" layoutX="92.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/vladimir.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="wukongV" layoutX="138.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="wukongV" layoutX="138.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/wukong.png" />
                </image>
             </ImageView>
-            <ImageView layoutX="184.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" fx:id="xayahV">
+            <ImageView layoutX="184.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip" fx:id="xayahV">
                <image>
                   <Image url="@tft/champions/xayah.jpg" />
                </image>
             </ImageView>
-            <ImageView fx:id="yasuoV" layoutX="230.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="yasuoV" layoutX="230.0" layoutY="368.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/yasuo.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="yoneV" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="yoneV" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/yone.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="yuumiV" layoutX="46.0" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="yuumiV" layoutX="46.0" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/yuumi.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="zedV" layoutX="92.0" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="zedV" layoutX="92.0" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/zed.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="zileanV" layoutX="138.0" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick">
+            <ImageView fx:id="zileanV" layoutX="138.0" layoutY="414.0" onDragDetected="#drag" onDragDone="#done" onDragDropped="#drop" onDragOver="#over" onMouseClicked="#mouseClick" onMouseEntered="#enterTooltip">
                <image>
                   <Image url="@tft/champions/zilean.png" />
                </image>
@@ -337,7 +337,7 @@
          </children>
       </Pane>
       <Text fx:id="buffs" layoutX="1045.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="211.13671875" />
-      <Pane layoutX="361.0" layoutY="72.0" prefHeight="64.0" prefWidth="448.0">
+      <Pane layoutX="332.0" layoutY="72.0" prefHeight="64.0" prefWidth="448.0">
          <children>
             <ImageView fx:id="brawler" fitHeight="32.0" fitWidth="32.0" layoutX="64.0" layoutY="34.0" onMouseEntered="#enterTooltip" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -479,7 +479,7 @@
             <DropShadow height="30.0" radius="14.5" spread="0.75" width="30.0" />
          </effect>
       </Pane>
-      <Text fill="WHITE" layoutX="361.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Merriweather', serif;     -fx-font-size: 30px;     -fx-font-weight: 300;     -fx-line-height: 40px;     -fx-margin: 0 30px 40px;     -fx-text-align: center;     -fx-text-shadow: #2a8d7b -1px -1px;" text="Pochodzenia i klasy postaci" textAlignment="CENTER" wrappingWidth="361.0">
+      <Text fill="WHITE" layoutX="352.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Merriweather', serif;     -fx-font-size: 30px;     -fx-font-weight: 300;     -fx-line-height: 40px;     -fx-margin: 0 30px 40px;     -fx-text-align: center;     -fx-text-shadow: #2a8d7b -1px -1px;" text="Pochodzenia i klasy postaci" textAlignment="CENTER" wrappingWidth="361.0">
          <font>
             <Font size="31.0" />
          </font>
@@ -487,7 +487,12 @@
             <DropShadow radius="23.3425" spread="0.89" width="74.37" />
          </effect>
       </Text>
-      <Button id="dark-blue" fx:id="save" layoutX="887.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionSave" prefHeight="75.0" prefWidth="172.0" stylesheets="@style.css" text="Zapisz">
+      <Button id="dark-blue" fx:id="save" layoutX="950.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionSave" prefHeight="75.0" prefWidth="130.0" stylesheets="@style.css" text="Zapisz">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button id="dark-blue" fx:id="load" layoutX="813.0" layoutY="50.0" mnemonicParsing="false" onAction="#onActionLoad" prefHeight="75.0" prefWidth="130.0" stylesheets="@style.css" text="Wczytaj">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
